@@ -1,0 +1,22 @@
+# --- secrets -----------------------------------------------------------------
+# NEVER commit your real .env: it holds the API key.
+.env
+
+# --- python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- runtime -----------------------------------------------------------------
+logs/
+*.log
+
+# --- local problem images ----------------------------------------------------
+# keep the folder, ignore the images the user drops in it
+images/*
+!images/.gitkeep

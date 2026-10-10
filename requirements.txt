@@ -1,0 +1,27 @@
+# Complex Mathematics Tutor Agent - runtime dependencies
+#
+# The project runs with the Python standard library ALONE (the offline
+# deterministic provider solves and verifies real mathematics), so this file
+# only lists the optional extras that unlock the full experience.
+#
+#   pip install -r requirements.txt
+
+# Preferred graph engine. When installed the agent registers its nodes in a
+# real langgraph StateGraph; when absent the built-in deterministic runner is
+# used instead (identical nodes, identical routing).
+langgraph>=0.2.0
+
+# Required by langgraph.
+langchain-core>=0.3.0
+
+# Nice-to-have: line editing + command history in the interactive CLI.
+# The CLI falls back to the built-in input() when it is missing.
+prompt_toolkit>=3.0.0
+
+# Test runner for tests/ (mock based, no API key required).
+pytest>=8.0.0
+
+# Optional: only needed if you want to send images with an OpenAI-compatible
+# model. The project talks to the REST endpoint with urllib, so the official
+# SDK is NOT required.
+# openai>=1.40.0
